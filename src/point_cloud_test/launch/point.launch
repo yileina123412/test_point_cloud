@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="point_cloud_test" type="pointcloud_generator" name="pointcloud_generator" output="screen">
+        <param name="frame_id" value="map" />
+    </node>
+    <!-- Launch RViz with a specific configuration -->
+    <node pkg="rviz" type="rviz" name="rviz"  />
+</launch>

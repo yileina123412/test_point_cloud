@@ -1,0 +1,11 @@
+<launch>
+    <node pkg="mat_trans" type="matrix_transformer_node" name="matrix_transformer_node" output="screen">
+        <!-- 设置参数 -->
+        <param name="scale_factor" value="1" />
+        <param name="transform_type" value="scale" />
+        <param name="data_folder" value="$(find mat_trans)/datas/L037_Sens1_600x250_cloud_8.mat" />
+        <param name="scanVoxelSize" type="double" value="0.1" />   <!--点云数据的体素分辨率-->
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz"  />
+</launch>

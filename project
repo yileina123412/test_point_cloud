@@ -1,0 +1,15 @@
+########test_cloud
+source devel/setup.bash
+roslaunch point_cloud_test point.launch
+
+roslaunch mat_trans transform.launch
+
+roslaunch pca_test powerline_extractor.launch
+
+
+
+
+###rslidar 
+在室内大概一次采集80000-100000个点
+
+

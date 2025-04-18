@@ -1,0 +1,8 @@
+<launch>
+    <!-- Powerline Extractor Node -->
+    <node pkg="pca_test" type="powerline_extractor" name="powerline_extractor" output="screen">
+        <param name="frame_id" value="map" />
+    </node>
+    <!-- RViz for visualization     args="-d $(find pca_test)/rviz/powerline.rviz"-->
+    <!-- <node pkg="rviz" type="rviz" name="rviz"  /> -->
+</launch>

@@ -1,0 +1,2 @@
+mat_trans:pca_test:point_cloud_test
+-DCATKIN_DEVEL_PREFIX=/home/furina/test_cloudpoint/devel -DCMAKE_INSTALL_PREFIX=/home/furina/test_cloudpoint/install -G Unix Makefiles
