@@ -2,7 +2,7 @@
 #include "matrix_transformer.h"
 
 
-
+//pcl_conversions pcl_ros roscpp sensor_msgs std_msgs tf
 
 pcl::PointCloud<pcl::PointXYZI>::Ptr
     pointCloufPtr(new pcl::PointCloud<pcl::PointXYZI>());
@@ -11,6 +11,8 @@ pcl::PointCloud<pcl::PointXYZI>::Ptr
 pcl::VoxelGrid<pcl::PointXYZI> downSizeFilter;    //体素滤波
 pcl::PointCloud<pcl::PointXYZI>::Ptr
 laserCloudDwz(new pcl::PointCloud<pcl::PointXYZI>());  //降采样后的点云
+
+float minZ = 1000;
    
 void MatrixTransformer::centerPointCloud(pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud)
 {
@@ -83,7 +85,7 @@ void MatrixTransformer::checkParameters() {
         ros::shutdown();
     }
 }
-/// Load .mat file and read point cloud data
+/// Load .mat file and read point cloud data 
 bool MatrixTransformer::loadMatFile(const std::string& file_path) {
     // Open .mat file
     mat_t* matfp = Mat_Open(file_path.c_str(), MAT_ACC_RDONLY);
@@ -151,7 +153,7 @@ bool MatrixTransformer::loadMatFile(const std::string& file_path) {
     return true;
 }
 
-/// Convert double data to point cloud
+/// Convert double data to point cloud   将double的数组转化为点云类型
 void MatrixTransformer::doubleToPointCloud()
 {
 
@@ -161,8 +163,12 @@ void MatrixTransformer::doubleToPointCloud()
         point.x = point_cloud_data_[i][0] -320700+50; // x
         point.y = point_cloud_data_[i][1] -4783000-100; // y
         point.z = point_cloud_data_[i][2] -260; // z
+       
         pointCloufPtr->push_back(point);
     }
+
+    // normalizePointCloudZ();
+
     int laserCloudSize = pointCloufPtr->points.size();
     for (int i = 0; i < laserCloudSize; i++)
     {
@@ -194,11 +200,34 @@ void MatrixTransformer::doubleToPointCloud()
     }
 }
 
+//寻找最小的z值
+void MatrixTransformer::normalizePointCloudZ()
+{
+    // Step 1: Find the minimum z value
+    
 
-void MatrixTransformer::convertToPointCloud2(sensor_msgs::PointCloud2& cloud_msg) {
+    // Iterate over each point in the point cloud
+    for (size_t i = 0; i < pointCloufPtr->points.size(); ++i)
+    {
+        if (pointCloufPtr->points[i].z < minZ)
+        {
+            minZ = pointCloufPtr->points[i].z;
+        }
+    }
 
+    // Step 2: Subtract the minimum z value from each point's z value
+    for (size_t i = 0; i < pointCloufPtr->points.size(); ++i)
+    {
+        pointCloufPtr->points[i].x -= 320700-50;
+        pointCloufPtr->points[i].y -= 4783100;
+        pointCloufPtr->points[i].z -= minZ;
+    }
+
+    // The cloud is now normalized such that the lowest z value is at zero
 }
 
+
+//发布点云数据
 void MatrixTransformer::publishPointCloud() {
     if (num_points_ == 0) {
         ROS_WARN("No point cloud data to publish");

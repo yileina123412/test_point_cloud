@@ -67,14 +67,14 @@ set(pca_test_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(pca_test_SOURCE_PREFIX /home/furina/test_cloudpoint/src/pca_test)
-  set(pca_test_DEVEL_PREFIX /home/furina/test_cloudpoint/devel)
+  set(pca_test_SOURCE_PREFIX /home/furina/cloud_test_project/test_point_cloud/src/pca_test)
+  set(pca_test_DEVEL_PREFIX /home/furina/cloud_test_project/test_point_cloud/devel)
   set(pca_test_INSTALL_PREFIX "")
   set(pca_test_PREFIX ${pca_test_DEVEL_PREFIX})
 else()
   set(pca_test_SOURCE_PREFIX "")
   set(pca_test_DEVEL_PREFIX "")
-  set(pca_test_INSTALL_PREFIX /home/furina/test_cloudpoint/install)
+  set(pca_test_INSTALL_PREFIX /home/furina/cloud_test_project/test_point_cloud/install)
   set(pca_test_PREFIX ${pca_test_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(pca_test_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/furina/test_cloudpoint/src/pca_test/include;/usr/include/pcl-1.10;/usr/include/eigen3;/usr/include;/usr/include/vtk-7.1;/usr/include/freetype2;/usr/include/x86_64-linux-gnu;/usr/include/ni;/usr/include/openni2;/usr/local/include " STREQUAL " ")
+if(NOT "/home/furina/cloud_test_project/test_point_cloud/src/pca_test/include;/usr/include/pcl-1.10;/usr/include/eigen3;/usr/include;/usr/include/vtk-7.1;/usr/include/freetype2;/usr/include/x86_64-linux-gnu;/usr/include/ni;/usr/include/openni2;/usr/local/include " STREQUAL " ")
   set(pca_test_INCLUDE_DIRS "")
-  set(_include_dirs "/home/furina/test_cloudpoint/src/pca_test/include;/usr/include/pcl-1.10;/usr/include/eigen3;/usr/include;/usr/include/vtk-7.1;/usr/include/freetype2;/usr/include/x86_64-linux-gnu;/usr/include/ni;/usr/include/openni2;/usr/local/include")
+  set(_include_dirs "/home/furina/cloud_test_project/test_point_cloud/src/pca_test/include;/usr/include/pcl-1.10;/usr/include/eigen3;/usr/include;/usr/include/vtk-7.1;/usr/include/freetype2;/usr/include/x86_64-linux-gnu;/usr/include/ni;/usr/include/openni2;/usr/local/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/furina/test_cloudpoint/src/pca_test/include;/usr/include/pcl-1.10;
         message(FATAL_ERROR "Project 'pca_test' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'pca_test' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/furina/test_cloudpoint/src/pca_test/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'pca_test' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/furina/cloud_test_project/test_point_cloud/src/pca_test/${idir}'.  ${_report}")
     endif()
     _list_append_unique(pca_test_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/furina/test_cloudpoint/devel/lib;/home/furina/test_cloudpoint/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/furina/cloud_test_project/test_point_cloud/devel/lib;/home/furina/cloud_test_project/test_point_cloud/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

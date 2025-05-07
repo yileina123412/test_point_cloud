@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/furina/test_cloudpoint/src
+CMAKE_SOURCE_DIR = /home/furina/cloud_test_project/test_point_cloud/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/furina/test_cloudpoint/build
+CMAKE_BINARY_DIR = /home/furina/cloud_test_project/test_point_cloud/build
 
 # Utility rule file for geometry_msgs_generate_messages_eus.
 
@@ -74,10 +74,10 @@ mat_trans/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build: geometry_msg
 .PHONY : mat_trans/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 
 mat_trans/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
-	cd /home/furina/test_cloudpoint/build/mat_trans && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/furina/cloud_test_project/test_point_cloud/build/mat_trans && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : mat_trans/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 
 mat_trans/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend:
-	cd /home/furina/test_cloudpoint/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/furina/test_cloudpoint/src /home/furina/test_cloudpoint/src/mat_trans /home/furina/test_cloudpoint/build /home/furina/test_cloudpoint/build/mat_trans /home/furina/test_cloudpoint/build/mat_trans/CMakeFiles/geometry_msgs_generate_messages_eus.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/furina/cloud_test_project/test_point_cloud/src /home/furina/cloud_test_project/test_point_cloud/src/mat_trans /home/furina/cloud_test_project/test_point_cloud/build /home/furina/cloud_test_project/test_point_cloud/build/mat_trans /home/furina/cloud_test_project/test_point_cloud/build/mat_trans/CMakeFiles/geometry_msgs_generate_messages_eus.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : mat_trans/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
 

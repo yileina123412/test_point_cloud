@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 全局点云构图节点 -->
+    <node pkg="global_point_mapping" type="global_pointcloud_mapping_node" name="global_pointcloud_mapping_node" output="screen">
+        <!-- 参数配置 -->
+        <param name="cloud_topic" value="/rslidar_points" />
+        <param name="imu_topic" value="/rslidar_imu_data" />
+        <param name="global_frame_id" value="map" />
+        <param name="lidar_frame_id" value="rslidar" />
+        <param name="voxel_size" value="0.1" /> <!-- 空间网格大小(m) -->
+        <param name="crop_radius" value="8.0" /> <!-- 点云裁剪半径(m) -->
+        <param name="point_weight_decay" value="0.9" /> <!-- 点权重衰减系数 -->
+        <param name="voxel_clean_threshold" value="300.0" /> <!-- 网格清理阈值(秒)，5分钟 -->
+    </node>
+    
+    <!-- 启动RViz进行可视化 -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find global_point_mapping)/rviz/global_mapping.rviz" />
+</launch>

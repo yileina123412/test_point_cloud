@@ -77,5 +77,5 @@ endif()
 
 set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/home/furina/.conan/data/gflags/2.2.2/_/_/package/8d9612c699e0c76c45e410a0de6c38f8b4d74f9f/lib;/home/furina/.conan/data/glog/0.6.0/_/_/package/e1fd1ca7313b041d4a3a96b420b488633327c4d0/lib;/home/furina/.conan/data/ceres-solver/1.14.0/_/_/package/7ee9e59cc40cbdec97f1dfe43334eb2e437be01c/lib;/home/furina/.conan/data/osqp/0.6.3/_/_/package/2af715f34a7c8c2aeae57b25be0a52c4110dc502/lib;/home/furina/.conan/data/libunwind/1.8.0/_/_/package/c8c888b1fc83f5e0145e8890c2af3bd4e0005c98/lib;/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

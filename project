@@ -6,8 +6,9 @@ roslaunch mat_trans transform.launch
 
 roslaunch pca_test powerline_extractor.launch
 
+roslaunch powerline_extractor powerline_extraction.launch
 
-
+roslaunch global_point_mapping global_pointcloud_mapping.launch
 
 ###rslidar 
 在室内大概一次采集80000-100000个点

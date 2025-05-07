@@ -193,14 +193,9 @@ int main(int argc, char** argv) {
     {
         ros::spinOnce();  //执行一次实践循环
 
-        if(extractor.isCallbackExecuted && !extractor.flag1)
-        {
-            extractor.filterNonGroundPoints(cloud, out_of_ground_cloud);
 
-            extractor.publichPointCloud(out_of_ground_cloud);
-        }
 
-        publichPointCloud(out_of_ground_cloud);
+   
         
         rate.sleep();     //让节点按照设定频率休眠   
     }

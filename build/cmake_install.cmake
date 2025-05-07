@@ -1,8 +1,8 @@
-# Install script for directory: /home/furina/test_cloudpoint/src
+# Install script for directory: /home/furina/cloud_test_project/test_point_cloud/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/furina/test_cloudpoint/install")
+  set(CMAKE_INSTALL_PREFIX "/home/furina/cloud_test_project/test_point_cloud/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -54,91 +54,93 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/furina/test_cloudpoint/install/_setup_util.py")
+   "/home/furina/cloud_test_project/test_point_cloud/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/furina/test_cloudpoint/install" TYPE PROGRAM FILES "/home/furina/test_cloudpoint/build/catkin_generated/installspace/_setup_util.py")
+  file(INSTALL DESTINATION "/home/furina/cloud_test_project/test_point_cloud/install" TYPE PROGRAM FILES "/home/furina/cloud_test_project/test_point_cloud/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/furina/test_cloudpoint/install/env.sh")
+   "/home/furina/cloud_test_project/test_point_cloud/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/furina/test_cloudpoint/install" TYPE PROGRAM FILES "/home/furina/test_cloudpoint/build/catkin_generated/installspace/env.sh")
+  file(INSTALL DESTINATION "/home/furina/cloud_test_project/test_point_cloud/install" TYPE PROGRAM FILES "/home/furina/cloud_test_project/test_point_cloud/build/catkin_generated/installspace/env.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/furina/test_cloudpoint/install/setup.bash;/home/furina/test_cloudpoint/install/local_setup.bash")
+   "/home/furina/cloud_test_project/test_point_cloud/install/setup.bash;/home/furina/cloud_test_project/test_point_cloud/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/furina/test_cloudpoint/install" TYPE FILE FILES
-    "/home/furina/test_cloudpoint/build/catkin_generated/installspace/setup.bash"
-    "/home/furina/test_cloudpoint/build/catkin_generated/installspace/local_setup.bash"
+  file(INSTALL DESTINATION "/home/furina/cloud_test_project/test_point_cloud/install" TYPE FILE FILES
+    "/home/furina/cloud_test_project/test_point_cloud/build/catkin_generated/installspace/setup.bash"
+    "/home/furina/cloud_test_project/test_point_cloud/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/furina/test_cloudpoint/install/setup.sh;/home/furina/test_cloudpoint/install/local_setup.sh")
+   "/home/furina/cloud_test_project/test_point_cloud/install/setup.sh;/home/furina/cloud_test_project/test_point_cloud/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/furina/test_cloudpoint/install" TYPE FILE FILES
-    "/home/furina/test_cloudpoint/build/catkin_generated/installspace/setup.sh"
-    "/home/furina/test_cloudpoint/build/catkin_generated/installspace/local_setup.sh"
+  file(INSTALL DESTINATION "/home/furina/cloud_test_project/test_point_cloud/install" TYPE FILE FILES
+    "/home/furina/cloud_test_project/test_point_cloud/build/catkin_generated/installspace/setup.sh"
+    "/home/furina/cloud_test_project/test_point_cloud/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/furina/test_cloudpoint/install/setup.zsh;/home/furina/test_cloudpoint/install/local_setup.zsh")
+   "/home/furina/cloud_test_project/test_point_cloud/install/setup.zsh;/home/furina/cloud_test_project/test_point_cloud/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/furina/test_cloudpoint/install" TYPE FILE FILES
-    "/home/furina/test_cloudpoint/build/catkin_generated/installspace/setup.zsh"
-    "/home/furina/test_cloudpoint/build/catkin_generated/installspace/local_setup.zsh"
+  file(INSTALL DESTINATION "/home/furina/cloud_test_project/test_point_cloud/install" TYPE FILE FILES
+    "/home/furina/cloud_test_project/test_point_cloud/build/catkin_generated/installspace/setup.zsh"
+    "/home/furina/cloud_test_project/test_point_cloud/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/furina/test_cloudpoint/install/.rosinstall")
+   "/home/furina/cloud_test_project/test_point_cloud/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/furina/test_cloudpoint/install" TYPE FILE FILES "/home/furina/test_cloudpoint/build/catkin_generated/installspace/.rosinstall")
+  file(INSTALL DESTINATION "/home/furina/cloud_test_project/test_point_cloud/install" TYPE FILE FILES "/home/furina/cloud_test_project/test_point_cloud/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/furina/test_cloudpoint/build/gtest/cmake_install.cmake")
-  include("/home/furina/test_cloudpoint/build/mat_trans/cmake_install.cmake")
-  include("/home/furina/test_cloudpoint/build/pca_test/cmake_install.cmake")
-  include("/home/furina/test_cloudpoint/build/point_cloud_test/cmake_install.cmake")
+  include("/home/furina/cloud_test_project/test_point_cloud/build/gtest/cmake_install.cmake")
+  include("/home/furina/cloud_test_project/test_point_cloud/build/global_point_mapping/cmake_install.cmake")
+  include("/home/furina/cloud_test_project/test_point_cloud/build/mat_trans/cmake_install.cmake")
+  include("/home/furina/cloud_test_project/test_point_cloud/build/pca_test/cmake_install.cmake")
+  include("/home/furina/cloud_test_project/test_point_cloud/build/point_cloud_test/cmake_install.cmake")
+  include("/home/furina/cloud_test_project/test_point_cloud/build/powerline_extractor/cmake_install.cmake")
 
 endif()
 
@@ -157,6 +159,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/furina/test_cloudpoint/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/furina/cloud_test_project/test_point_cloud/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

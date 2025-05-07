@@ -1,8 +1,8 @@
-# Install script for directory: /home/furina/test_cloudpoint/src/point_cloud_test
+# Install script for directory: /home/furina/cloud_test_project/test_point_cloud/src/point_cloud_test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/furina/test_cloudpoint/install")
+  set(CMAKE_INSTALL_PREFIX "/home/furina/cloud_test_project/test_point_cloud/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,17 +43,17 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/furina/test_cloudpoint/build/point_cloud_test/catkin_generated/installspace/point_cloud_test.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/furina/cloud_test_project/test_point_cloud/build/point_cloud_test/catkin_generated/installspace/point_cloud_test.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/point_cloud_test/cmake" TYPE FILE FILES
-    "/home/furina/test_cloudpoint/build/point_cloud_test/catkin_generated/installspace/point_cloud_testConfig.cmake"
-    "/home/furina/test_cloudpoint/build/point_cloud_test/catkin_generated/installspace/point_cloud_testConfig-version.cmake"
+    "/home/furina/cloud_test_project/test_point_cloud/build/point_cloud_test/catkin_generated/installspace/point_cloud_testConfig.cmake"
+    "/home/furina/cloud_test_project/test_point_cloud/build/point_cloud_test/catkin_generated/installspace/point_cloud_testConfig-version.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/point_cloud_test" TYPE FILE FILES "/home/furina/test_cloudpoint/src/point_cloud_test/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/point_cloud_test" TYPE FILE FILES "/home/furina/cloud_test_project/test_point_cloud/src/point_cloud_test/package.xml")
 endif()
 

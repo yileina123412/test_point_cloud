@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/furina/test_cloudpoint/src
+CMAKE_SOURCE_DIR = /home/furina/cloud_test_project/test_point_cloud/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/furina/test_cloudpoint/build
+CMAKE_BINARY_DIR = /home/furina/cloud_test_project/test_point_cloud/build
 
 # Utility rule file for tests.
 
@@ -78,6 +78,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/furina/test_cloudpoint/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/furina/test_cloudpoint/src /home/furina/test_cloudpoint/src /home/furina/test_cloudpoint/build /home/furina/test_cloudpoint/build /home/furina/test_cloudpoint/build/CMakeFiles/tests.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/furina/cloud_test_project/test_point_cloud/src /home/furina/cloud_test_project/test_point_cloud/src /home/furina/cloud_test_project/test_point_cloud/build /home/furina/cloud_test_project/test_point_cloud/build /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles/tests.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/tests.dir/depend
 

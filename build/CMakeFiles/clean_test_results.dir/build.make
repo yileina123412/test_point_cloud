@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/furina/test_cloudpoint/src
+CMAKE_SOURCE_DIR = /home/furina/cloud_test_project/test_point_cloud/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/furina/test_cloudpoint/build
+CMAKE_BINARY_DIR = /home/furina/cloud_test_project/test_point_cloud/build
 
 # Utility rule file for clean_test_results.
 
@@ -67,7 +67,7 @@ include CMakeFiles/clean_test_results.dir/compiler_depend.make
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/furina/test_cloudpoint/build/test_results
+	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/furina/cloud_test_project/test_point_cloud/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/furina/test_cloudpoint/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/furina/test_cloudpoint/src /home/furina/test_cloudpoint/src /home/furina/test_cloudpoint/build /home/furina/test_cloudpoint/build /home/furina/test_cloudpoint/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/furina/cloud_test_project/test_point_cloud/src /home/furina/cloud_test_project/test_point_cloud/src /home/furina/cloud_test_project/test_point_cloud/build /home/furina/cloud_test_project/test_point_cloud/build /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

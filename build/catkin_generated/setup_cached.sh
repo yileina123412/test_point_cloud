@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/furina/test_cloudpoint/build'
+export PWD='/home/furina/cloud_test_project/test_point_cloud/build'

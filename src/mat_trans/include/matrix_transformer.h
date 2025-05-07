@@ -13,6 +13,7 @@
 #include <pcl/point_types.h>
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/common/common.h>
+#include <pcl/io/pcd_io.h>
 #include <Eigen/Dense>
 
 
@@ -22,11 +23,12 @@ public:
     ~MatrixTransformer();
     void publishPointCloud();
     void testpublishPointCloud();
+    void normalizePointCloudZ();
 
 private:
     void checkParameters();
     bool loadMatFile(const std::string& file_path);
-    void convertToPointCloud2(sensor_msgs::PointCloud2& cloud_msg);
+    
     void doubleToPointCloud();
     void centerPointCloud(pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud);
     

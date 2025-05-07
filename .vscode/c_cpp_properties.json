@@ -6,8 +6,11 @@
         "limitSymbolsToIncludedHeaders": false
       },
       "includePath": [
+        "${workspaceFolder}/**",
         "/opt/ros/noetic/include/**",
-        "/usr/include/**"
+        "/usr/include/**",
+        "powerline_extractor/include/**",
+        "global_point_mapping/include/**"
       ],
       "name": "ROS",
       "intelliSenseMode": "gcc-x64",

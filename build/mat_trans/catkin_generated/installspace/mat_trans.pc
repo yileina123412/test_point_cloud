@@ -1,4 +1,4 @@
-prefix=/home/furina/test_cloudpoint/install
+prefix=/home/furina/cloud_test_project/test_point_cloud/install
 
 Name: mat_trans
 Description: Description of mat_trans

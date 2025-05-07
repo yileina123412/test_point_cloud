@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- 参数设置 -->
+  <arg name="mat_file_path" default="$(find powerline_extractor)/datas/L037_Sens1_600x250_cloud_8.mat"/>
+  <arg name="voxel_size" default="0.05"/>
+  <arg name="pca_radius" default="0.5"/>
+  <arg name="angle_threshold" default="10.0"/>
+  <arg name="linearity_threshold" default="0.98"/>
+
+  <arg name="cluster_tolerance" default="2.0"/>
+  <arg name="min_cluster_size" default="15"/>
+  <arg name="max_cluster_size" default="100000"/>
+  
+  <!-- 启动电力线提取节点 -->
+  <node name="powerline_extractor" pkg="powerline_extractor" type="powerline_extractor_node" output="screen">
+    <param name="data_folder" value="$(arg mat_file_path)"/>
+    <param name="voxel_size" value="$(arg voxel_size)"/>
+    <param name="pca_radius" value="$(arg pca_radius)"/>
+    <param name="angle_threshold" value="$(arg angle_threshold)"/>
+    <param name="linearity_threshold" value="$(arg linearity_threshold)"/>
+
+    <param name="cluster_tolerance" value="$(arg cluster_tolerance)"/>
+    <param name="min_cluster_size" value="$(arg min_cluster_size)"/>
+    <param name="max_cluster_size" value="$(arg max_cluster_size)"/>
+  </node>
+  
+  <!-- 可视化 -->
+  <node name="rviz" pkg="rviz" type="rviz" />
+</launch>

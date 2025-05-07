@@ -67,14 +67,14 @@ set(point_cloud_test_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(point_cloud_test_SOURCE_PREFIX /home/furina/test_cloudpoint/src/point_cloud_test)
-  set(point_cloud_test_DEVEL_PREFIX /home/furina/test_cloudpoint/devel)
+  set(point_cloud_test_SOURCE_PREFIX /home/furina/cloud_test_project/test_point_cloud/src/point_cloud_test)
+  set(point_cloud_test_DEVEL_PREFIX /home/furina/cloud_test_project/test_point_cloud/devel)
   set(point_cloud_test_INSTALL_PREFIX "")
   set(point_cloud_test_PREFIX ${point_cloud_test_DEVEL_PREFIX})
 else()
   set(point_cloud_test_SOURCE_PREFIX "")
   set(point_cloud_test_DEVEL_PREFIX "")
-  set(point_cloud_test_INSTALL_PREFIX /home/furina/test_cloudpoint/install)
+  set(point_cloud_test_INSTALL_PREFIX /home/furina/cloud_test_project/test_point_cloud/install)
   set(point_cloud_test_PREFIX ${point_cloud_test_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/furina/test_cloudpoint/install/lib;/home/furina/test_cloudpoint/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/furina/cloud_test_project/test_point_cloud/install/lib;/home/furina/cloud_test_project/test_point_cloud/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

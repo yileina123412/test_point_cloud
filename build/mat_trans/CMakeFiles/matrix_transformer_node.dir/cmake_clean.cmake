@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/furina/test_cloudpoint/devel/lib/mat_trans/matrix_transformer_node"
-  "/home/furina/test_cloudpoint/devel/lib/mat_trans/matrix_transformer_node.pdb"
+  "/home/furina/cloud_test_project/test_point_cloud/devel/lib/mat_trans/matrix_transformer_node"
+  "/home/furina/cloud_test_project/test_point_cloud/devel/lib/mat_trans/matrix_transformer_node.pdb"
   "CMakeFiles/matrix_transformer_node.dir/src/matrix_transformer.cpp.o"
   "CMakeFiles/matrix_transformer_node.dir/src/matrix_transformer.cpp.o.d"
   "CMakeFiles/matrix_transformer_node.dir/src/matrix_transformer_node.cpp.o"

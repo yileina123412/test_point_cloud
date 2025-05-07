@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/furina/test_cloudpoint/src
+CMAKE_SOURCE_DIR = /home/furina/cloud_test_project/test_point_cloud/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/furina/test_cloudpoint/build
+CMAKE_BINARY_DIR = /home/furina/cloud_test_project/test_point_cloud/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -77,8 +77,8 @@ test/fast: test
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/usr/local/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/furina/test_cloudpoint/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/furina/test_cloudpoint/build/CMakeFiles /home/furina/test_cloudpoint/build/point_cloud_test//CMakeFiles/progress.marks
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/test_cloudpoint/build/CMakeFiles 0
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles /home/furina/cloud_test_project/test_point_cloud/build/point_cloud_test//CMakeFiles/progress.marks
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_test/clean
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_test/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,22 +158,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_test/preinstall
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_test/preinstall
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/furina/test_cloudpoint/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 point_cloud_test/CMakeFiles/pointcloud_generator.dir/rule:
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_test/CMakeFiles/pointcloud_generator.dir/rule
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point_cloud_test/CMakeFiles/pointcloud_generator.dir/rule
 .PHONY : point_cloud_test/CMakeFiles/pointcloud_generator.dir/rule
 
 # Convenience name for target.
@@ -182,7 +182,7 @@ pointcloud_generator: point_cloud_test/CMakeFiles/pointcloud_generator.dir/rule
 
 # fast build rule for target.
 pointcloud_generator/fast:
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/build
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/build
 .PHONY : pointcloud_generator/fast
 
 src/pointcloud_generator.o: src/pointcloud_generator.cpp.o
@@ -190,7 +190,7 @@ src/pointcloud_generator.o: src/pointcloud_generator.cpp.o
 
 # target to build an object file
 src/pointcloud_generator.cpp.o:
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator.cpp.o
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator.cpp.o
 .PHONY : src/pointcloud_generator.cpp.o
 
 src/pointcloud_generator.i: src/pointcloud_generator.cpp.i
@@ -198,7 +198,7 @@ src/pointcloud_generator.i: src/pointcloud_generator.cpp.i
 
 # target to preprocess a source file
 src/pointcloud_generator.cpp.i:
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator.cpp.i
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator.cpp.i
 .PHONY : src/pointcloud_generator.cpp.i
 
 src/pointcloud_generator.s: src/pointcloud_generator.cpp.s
@@ -206,7 +206,7 @@ src/pointcloud_generator.s: src/pointcloud_generator.cpp.s
 
 # target to generate assembly for a file
 src/pointcloud_generator.cpp.s:
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator.cpp.s
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator.cpp.s
 .PHONY : src/pointcloud_generator.cpp.s
 
 src/pointcloud_generator_node.o: src/pointcloud_generator_node.cpp.o
@@ -214,7 +214,7 @@ src/pointcloud_generator_node.o: src/pointcloud_generator_node.cpp.o
 
 # target to build an object file
 src/pointcloud_generator_node.cpp.o:
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator_node.cpp.o
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator_node.cpp.o
 .PHONY : src/pointcloud_generator_node.cpp.o
 
 src/pointcloud_generator_node.i: src/pointcloud_generator_node.cpp.i
@@ -222,7 +222,7 @@ src/pointcloud_generator_node.i: src/pointcloud_generator_node.cpp.i
 
 # target to preprocess a source file
 src/pointcloud_generator_node.cpp.i:
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator_node.cpp.i
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator_node.cpp.i
 .PHONY : src/pointcloud_generator_node.cpp.i
 
 src/pointcloud_generator_node.s: src/pointcloud_generator_node.cpp.s
@@ -230,7 +230,7 @@ src/pointcloud_generator_node.s: src/pointcloud_generator_node.cpp.s
 
 # target to generate assembly for a file
 src/pointcloud_generator_node.cpp.s:
-	cd /home/furina/test_cloudpoint/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator_node.cpp.s
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/src/pointcloud_generator_node.cpp.s
 .PHONY : src/pointcloud_generator_node.cpp.s
 
 # Help Target
@@ -264,6 +264,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/furina/test_cloudpoint/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
