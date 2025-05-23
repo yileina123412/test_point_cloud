@@ -78,7 +78,7 @@
 
   <!-- 启动RViz进行可视化 -->
   <node name="rviz_obstacle_detection" pkg="rviz" type="rviz" 
-        args="-d $(find powerline_extractor)/config/obstacle_detection.rviz" 
+        args="-d $(find powerline_extractor)/rviz/powerline_obs.rviz" 
         if="$(arg enable_visualization)"/>
         
   <!-- 可选：启动rqt_plot显示距离曲线 -->

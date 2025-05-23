@@ -79,5 +79,5 @@
   </node>
   
   <!-- 可视化 -->
-  <node name="rviz" pkg="rviz" type="rviz" />
+  <!-- <node name="rviz" pkg="rviz" type="rviz" /> -->
 </launch>

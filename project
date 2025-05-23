@@ -8,6 +8,9 @@ roslaunch pca_test powerline_extractor.launch
 
 roslaunch powerline_extractor powerline_extraction.launch
 
+
+roslaunch powerline_extractor obstacle_detection.launch
+
 roslaunch global_point_mapping global_pointcloud_mapping.launch
 
 ###rslidar 
