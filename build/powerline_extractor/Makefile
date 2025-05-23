@@ -172,6 +172,146 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_cpp: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+.PHONY : visualization_msgs_generate_messages_cpp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_cpp/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+.PHONY : visualization_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_eus: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+.PHONY : visualization_msgs_generate_messages_eus
+
+# fast build rule for target.
+visualization_msgs_generate_messages_eus/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
+.PHONY : visualization_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_lisp: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+.PHONY : visualization_msgs_generate_messages_lisp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_lisp/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+.PHONY : visualization_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_nodejs: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+.PHONY : visualization_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+visualization_msgs_generate_messages_nodejs/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
+.PHONY : visualization_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_py: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+.PHONY : visualization_msgs_generate_messages_py
+
+# fast build rule for target.
+visualization_msgs_generate_messages_py/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+.PHONY : visualization_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sound_play_generate_messages_cpp: powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/rule
+.PHONY : sound_play_generate_messages_cpp
+
+# fast build rule for target.
+sound_play_generate_messages_cpp/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/build
+.PHONY : sound_play_generate_messages_cpp/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sound_play_generate_messages_eus: powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/rule
+.PHONY : sound_play_generate_messages_eus
+
+# fast build rule for target.
+sound_play_generate_messages_eus/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/build
+.PHONY : sound_play_generate_messages_eus/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sound_play_generate_messages_lisp: powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/rule
+.PHONY : sound_play_generate_messages_lisp
+
+# fast build rule for target.
+sound_play_generate_messages_lisp/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/build
+.PHONY : sound_play_generate_messages_lisp/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sound_play_generate_messages_nodejs: powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule
+.PHONY : sound_play_generate_messages_nodejs
+
+# fast build rule for target.
+sound_play_generate_messages_nodejs/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/build
+.PHONY : sound_play_generate_messages_nodejs/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sound_play_generate_messages_py: powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/rule
+.PHONY : sound_play_generate_messages_py
+
+# fast build rule for target.
+sound_play_generate_messages_py/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/build
+.PHONY : sound_play_generate_messages_py/fast
+
+# Convenience name for target.
 powerline_extractor/CMakeFiles/powerline_extractor_node.dir/rule:
 	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/powerline_extractor_node.dir/rule
 .PHONY : powerline_extractor/CMakeFiles/powerline_extractor_node.dir/rule
@@ -184,6 +324,106 @@ powerline_extractor_node: powerline_extractor/CMakeFiles/powerline_extractor_nod
 powerline_extractor_node/fast:
 	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/powerline_extractor_node.dir/build.make powerline_extractor/CMakeFiles/powerline_extractor_node.dir/build
 .PHONY : powerline_extractor_node/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/obstacle_detector_node.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/obstacle_detector_node.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/obstacle_detector_node.dir/rule
+
+# Convenience name for target.
+obstacle_detector_node: powerline_extractor/CMakeFiles/obstacle_detector_node.dir/rule
+.PHONY : obstacle_detector_node
+
+# fast build rule for target.
+obstacle_detector_node/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build.make powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build
+.PHONY : obstacle_detector_node/fast
+
+# Convenience name for target.
+powerline_extractor/CMakeFiles/distance_monitor_node.dir/rule:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/distance_monitor_node.dir/rule
+.PHONY : powerline_extractor/CMakeFiles/distance_monitor_node.dir/rule
+
+# Convenience name for target.
+distance_monitor_node: powerline_extractor/CMakeFiles/distance_monitor_node.dir/rule
+.PHONY : distance_monitor_node
+
+# fast build rule for target.
+distance_monitor_node/fast:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/distance_monitor_node.dir/build.make powerline_extractor/CMakeFiles/distance_monitor_node.dir/build
+.PHONY : distance_monitor_node/fast
+
+src/distance_monitor.o: src/distance_monitor.cpp.o
+.PHONY : src/distance_monitor.o
+
+# target to build an object file
+src/distance_monitor.cpp.o:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/distance_monitor_node.dir/build.make powerline_extractor/CMakeFiles/distance_monitor_node.dir/src/distance_monitor.cpp.o
+.PHONY : src/distance_monitor.cpp.o
+
+src/distance_monitor.i: src/distance_monitor.cpp.i
+.PHONY : src/distance_monitor.i
+
+# target to preprocess a source file
+src/distance_monitor.cpp.i:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/distance_monitor_node.dir/build.make powerline_extractor/CMakeFiles/distance_monitor_node.dir/src/distance_monitor.cpp.i
+.PHONY : src/distance_monitor.cpp.i
+
+src/distance_monitor.s: src/distance_monitor.cpp.s
+.PHONY : src/distance_monitor.s
+
+# target to generate assembly for a file
+src/distance_monitor.cpp.s:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/distance_monitor_node.dir/build.make powerline_extractor/CMakeFiles/distance_monitor_node.dir/src/distance_monitor.cpp.s
+.PHONY : src/distance_monitor.cpp.s
+
+src/obstacle_detector.o: src/obstacle_detector.cpp.o
+.PHONY : src/obstacle_detector.o
+
+# target to build an object file
+src/obstacle_detector.cpp.o:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build.make powerline_extractor/CMakeFiles/obstacle_detector_node.dir/src/obstacle_detector.cpp.o
+.PHONY : src/obstacle_detector.cpp.o
+
+src/obstacle_detector.i: src/obstacle_detector.cpp.i
+.PHONY : src/obstacle_detector.i
+
+# target to preprocess a source file
+src/obstacle_detector.cpp.i:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build.make powerline_extractor/CMakeFiles/obstacle_detector_node.dir/src/obstacle_detector.cpp.i
+.PHONY : src/obstacle_detector.cpp.i
+
+src/obstacle_detector.s: src/obstacle_detector.cpp.s
+.PHONY : src/obstacle_detector.s
+
+# target to generate assembly for a file
+src/obstacle_detector.cpp.s:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build.make powerline_extractor/CMakeFiles/obstacle_detector_node.dir/src/obstacle_detector.cpp.s
+.PHONY : src/obstacle_detector.cpp.s
+
+src/obstacle_detector_node.o: src/obstacle_detector_node.cpp.o
+.PHONY : src/obstacle_detector_node.o
+
+# target to build an object file
+src/obstacle_detector_node.cpp.o:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build.make powerline_extractor/CMakeFiles/obstacle_detector_node.dir/src/obstacle_detector_node.cpp.o
+.PHONY : src/obstacle_detector_node.cpp.o
+
+src/obstacle_detector_node.i: src/obstacle_detector_node.cpp.i
+.PHONY : src/obstacle_detector_node.i
+
+# target to preprocess a source file
+src/obstacle_detector_node.cpp.i:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build.make powerline_extractor/CMakeFiles/obstacle_detector_node.dir/src/obstacle_detector_node.cpp.i
+.PHONY : src/obstacle_detector_node.cpp.i
+
+src/obstacle_detector_node.s: src/obstacle_detector_node.cpp.s
+.PHONY : src/obstacle_detector_node.s
+
+# target to generate assembly for a file
+src/obstacle_detector_node.cpp.s:
+	cd /home/furina/cloud_test_project/test_point_cloud/build && $(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build.make powerline_extractor/CMakeFiles/obstacle_detector_node.dir/src/obstacle_detector_node.cpp.s
+.PHONY : src/obstacle_detector_node.cpp.s
 
 src/powerline_extractor.o: src/powerline_extractor.cpp.o
 .PHONY : src/powerline_extractor.o
@@ -246,7 +486,28 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... sound_play_generate_messages_cpp"
+	@echo "... sound_play_generate_messages_eus"
+	@echo "... sound_play_generate_messages_lisp"
+	@echo "... sound_play_generate_messages_nodejs"
+	@echo "... sound_play_generate_messages_py"
+	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... visualization_msgs_generate_messages_eus"
+	@echo "... visualization_msgs_generate_messages_lisp"
+	@echo "... visualization_msgs_generate_messages_nodejs"
+	@echo "... visualization_msgs_generate_messages_py"
+	@echo "... distance_monitor_node"
+	@echo "... obstacle_detector_node"
 	@echo "... powerline_extractor_node"
+	@echo "... src/distance_monitor.o"
+	@echo "... src/distance_monitor.i"
+	@echo "... src/distance_monitor.s"
+	@echo "... src/obstacle_detector.o"
+	@echo "... src/obstacle_detector.i"
+	@echo "... src/obstacle_detector.s"
+	@echo "... src/obstacle_detector_node.o"
+	@echo "... src/obstacle_detector_node.i"
+	@echo "... src/obstacle_detector_node.s"
 	@echo "... src/powerline_extractor.o"
 	@echo "... src/powerline_extractor.i"
 	@echo "... src/powerline_extractor.s"

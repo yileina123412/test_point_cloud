@@ -285,6 +285,8 @@ point_cloud_test/clean: point_cloud_test/CMakeFiles/pointcloud_generator.dir/cle
 
 # Recursive "all" directory target.
 powerline_extractor/all: powerline_extractor/CMakeFiles/powerline_extractor_node.dir/all
+powerline_extractor/all: powerline_extractor/CMakeFiles/obstacle_detector_node.dir/all
+powerline_extractor/all: powerline_extractor/CMakeFiles/distance_monitor_node.dir/all
 .PHONY : powerline_extractor/all
 
 # Recursive "preinstall" directory target.
@@ -292,7 +294,19 @@ powerline_extractor/preinstall:
 .PHONY : powerline_extractor/preinstall
 
 # Recursive "clean" directory target.
+powerline_extractor/clean: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/clean
 powerline_extractor/clean: powerline_extractor/CMakeFiles/powerline_extractor_node.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/obstacle_detector_node.dir/clean
+powerline_extractor/clean: powerline_extractor/CMakeFiles/distance_monitor_node.dir/clean
 .PHONY : powerline_extractor/clean
 
 #=============================================================================
@@ -432,7 +446,7 @@ CMakeFiles/doxygen.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=4,5 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=6,7 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -459,7 +473,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=6,7 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=8,9 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -485,7 +499,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=8,9 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=10,11 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -511,7 +525,7 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=10,11 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=12,13 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2565,7 +2579,7 @@ global_point_mapping/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean:
 global_point_mapping/CMakeFiles/global_pointcloud_mapping_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f global_point_mapping/CMakeFiles/global_pointcloud_mapping_node.dir/build.make global_point_mapping/CMakeFiles/global_pointcloud_mapping_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f global_point_mapping/CMakeFiles/global_pointcloud_mapping_node.dir/build.make global_point_mapping/CMakeFiles/global_pointcloud_mapping_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=1,2,3 "Built target global_pointcloud_mapping_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=3,4,5 "Built target global_pointcloud_mapping_node"
 .PHONY : global_point_mapping/CMakeFiles/global_pointcloud_mapping_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2591,7 +2605,7 @@ global_point_mapping/CMakeFiles/global_pointcloud_mapping_node.dir/clean:
 mat_trans/CMakeFiles/matrix_transformer_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f mat_trans/CMakeFiles/matrix_transformer_node.dir/build.make mat_trans/CMakeFiles/matrix_transformer_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f mat_trans/CMakeFiles/matrix_transformer_node.dir/build.make mat_trans/CMakeFiles/matrix_transformer_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=12,13,14 "Built target matrix_transformer_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=14,15,16 "Built target matrix_transformer_node"
 .PHONY : mat_trans/CMakeFiles/matrix_transformer_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2617,7 +2631,7 @@ mat_trans/CMakeFiles/matrix_transformer_node.dir/clean:
 pca_test/CMakeFiles/powerline_extractor.dir/all:
 	$(MAKE) $(MAKESILENT) -f pca_test/CMakeFiles/powerline_extractor.dir/build.make pca_test/CMakeFiles/powerline_extractor.dir/depend
 	$(MAKE) $(MAKESILENT) -f pca_test/CMakeFiles/powerline_extractor.dir/build.make pca_test/CMakeFiles/powerline_extractor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=18,19 "Built target powerline_extractor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=23,24 "Built target powerline_extractor"
 .PHONY : pca_test/CMakeFiles/powerline_extractor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2643,7 +2657,7 @@ pca_test/CMakeFiles/powerline_extractor.dir/clean:
 point_cloud_test/CMakeFiles/pointcloud_generator.dir/all:
 	$(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/depend
 	$(MAKE) $(MAKESILENT) -f point_cloud_test/CMakeFiles/pointcloud_generator.dir/build.make point_cloud_test/CMakeFiles/pointcloud_generator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=15,16,17 "Built target pointcloud_generator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=20,21,22 "Built target pointcloud_generator"
 .PHONY : point_cloud_test/CMakeFiles/pointcloud_generator.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2663,13 +2677,273 @@ point_cloud_test/CMakeFiles/pointcloud_generator.dir/clean:
 .PHONY : point_cloud_test/CMakeFiles/pointcloud_generator.dir/clean
 
 #=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num= "Built target visualization_msgs_generate_messages_cpp"
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_cpp: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+.PHONY : visualization_msgs_generate_messages_cpp
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num= "Built target visualization_msgs_generate_messages_eus"
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_eus: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+.PHONY : visualization_msgs_generate_messages_eus
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num= "Built target visualization_msgs_generate_messages_lisp"
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_lisp: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+.PHONY : visualization_msgs_generate_messages_lisp
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num= "Built target visualization_msgs_generate_messages_nodejs"
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_nodejs: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+.PHONY : visualization_msgs_generate_messages_nodejs
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num= "Built target visualization_msgs_generate_messages_py"
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_py: powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+.PHONY : visualization_msgs_generate_messages_py
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num= "Built target sound_play_generate_messages_cpp"
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sound_play_generate_messages_cpp: powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/rule
+.PHONY : sound_play_generate_messages_cpp
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num= "Built target sound_play_generate_messages_eus"
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sound_play_generate_messages_eus: powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/rule
+.PHONY : sound_play_generate_messages_eus
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num= "Built target sound_play_generate_messages_lisp"
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sound_play_generate_messages_lisp: powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/rule
+.PHONY : sound_play_generate_messages_lisp
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num= "Built target sound_play_generate_messages_nodejs"
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sound_play_generate_messages_nodejs: powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/rule
+.PHONY : sound_play_generate_messages_nodejs
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num= "Built target sound_play_generate_messages_py"
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sound_play_generate_messages_py: powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/rule
+.PHONY : sound_play_generate_messages_py
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/build.make powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/sound_play_generate_messages_py.dir/clean
+
+#=============================================================================
 # Target rules for target powerline_extractor/CMakeFiles/powerline_extractor_node.dir
 
 # All Build rule for target.
 powerline_extractor/CMakeFiles/powerline_extractor_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/powerline_extractor_node.dir/build.make powerline_extractor/CMakeFiles/powerline_extractor_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/powerline_extractor_node.dir/build.make powerline_extractor/CMakeFiles/powerline_extractor_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=20,21,22 "Built target powerline_extractor_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=25,26,27 "Built target powerline_extractor_node"
 .PHONY : powerline_extractor/CMakeFiles/powerline_extractor_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2687,6 +2961,58 @@ powerline_extractor_node: powerline_extractor/CMakeFiles/powerline_extractor_nod
 powerline_extractor/CMakeFiles/powerline_extractor_node.dir/clean:
 	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/powerline_extractor_node.dir/build.make powerline_extractor/CMakeFiles/powerline_extractor_node.dir/clean
 .PHONY : powerline_extractor/CMakeFiles/powerline_extractor_node.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/obstacle_detector_node.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/obstacle_detector_node.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build.make powerline_extractor/CMakeFiles/obstacle_detector_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build.make powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=17,18,19 "Built target obstacle_detector_node"
+.PHONY : powerline_extractor/CMakeFiles/obstacle_detector_node.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/obstacle_detector_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/obstacle_detector_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/obstacle_detector_node.dir/rule
+
+# Convenience name for target.
+obstacle_detector_node: powerline_extractor/CMakeFiles/obstacle_detector_node.dir/rule
+.PHONY : obstacle_detector_node
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/obstacle_detector_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/obstacle_detector_node.dir/build.make powerline_extractor/CMakeFiles/obstacle_detector_node.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/obstacle_detector_node.dir/clean
+
+#=============================================================================
+# Target rules for target powerline_extractor/CMakeFiles/distance_monitor_node.dir
+
+# All Build rule for target.
+powerline_extractor/CMakeFiles/distance_monitor_node.dir/all:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/distance_monitor_node.dir/build.make powerline_extractor/CMakeFiles/distance_monitor_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/distance_monitor_node.dir/build.make powerline_extractor/CMakeFiles/distance_monitor_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles --progress-num=1,2 "Built target distance_monitor_node"
+.PHONY : powerline_extractor/CMakeFiles/distance_monitor_node.dir/all
+
+# Build rule for subdir invocation for target.
+powerline_extractor/CMakeFiles/distance_monitor_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 powerline_extractor/CMakeFiles/distance_monitor_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/furina/cloud_test_project/test_point_cloud/build/CMakeFiles 0
+.PHONY : powerline_extractor/CMakeFiles/distance_monitor_node.dir/rule
+
+# Convenience name for target.
+distance_monitor_node: powerline_extractor/CMakeFiles/distance_monitor_node.dir/rule
+.PHONY : distance_monitor_node
+
+# clean rule for target.
+powerline_extractor/CMakeFiles/distance_monitor_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f powerline_extractor/CMakeFiles/distance_monitor_node.dir/build.make powerline_extractor/CMakeFiles/distance_monitor_node.dir/clean
+.PHONY : powerline_extractor/CMakeFiles/distance_monitor_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

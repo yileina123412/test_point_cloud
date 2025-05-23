@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- 完整的电力线检测和障碍物检测系统 -->
+  
+  <!-- 通用参数 -->
+  <arg name="target_frame" default="map"/>
+  <arg name="use_lidar_data" default="true"/>
+  <arg name="lidar_topic" default="/livox/lidar"/>
+  <arg name="lidar_frame" default="livox_frame"/>
+  
+  <!-- 电力线提取参数 -->
+  <arg name="mat_file_path" default="$(find powerline_extractor)/datas/L037_Sens1_600x250_cloud_8.mat"/>
+  <arg name="voxel_size" default="0.2"/>
+  <arg name="pca_radius" default="0.9"/>
+  <arg name="angle_threshold" default="10.0"/>
+  <arg name="linearity_threshold" default="0.95"/>
+  <arg name="ground_filter_method" default="ransac"/>
+  <arg name="ground_height_threshold" default="1.5"/>
+  
+  <!-- 障碍物检测参数 -->
+  <arg name="search_radius" default="5.0"/>
+  <arg name="min_obstacle_distance" default="2.0"/>
+  <arg name="enable_visualization" default="true"/>
+  
+  <!-- 1. 启动坐标转换 -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="livox_to_map" 
+        args="0 0 0 0 0 0 $(arg target_frame) $(arg lidar_frame)" />
+
+  <!-- 2. 启动电力线提取节点 -->
+  <node name="powerline_extractor" pkg="powerline_extractor" type="powerline_extractor_node" output="screen">
+    <!-- 基本参数 -->
+    <param name="use_lidar_data" value="$(arg use_lidar_data)"/>
+    <param name="data_folder" value="$(arg mat_file_path)"/>
+    <param name="target_frame" value="$(arg target_frame)"/>
+    <param name="lidar_frame" value="$(arg lidar_frame)"/>
+    <param name="lidar_topic" value="$(arg lidar_topic)"/>
+    <param name="publish_rate" value="1.0"/>
+    
+    <!-- 点云处理参数 -->
+    <param name="clip_radius" value="8.0"/>
+    <param name="max_accumulated_frames" value="1000"/>
+    <param name="voxel_size" value="$(arg voxel_size)"/>
+    <param name="pca_radius" value="$(arg pca_radius)"/>
+    <param name="angle_threshold" value="$(arg angle_threshold)"/>
+    <param name="linearity_threshold" value="$(arg linearity_threshold)"/>
+    
+    <!-- 聚类参数 -->
+    <param name="cluster_tolerance" value="2.0"/>
+    <param name="min_cluster_size" value="15"/>
+    <param name="max_cluster_size" value="100000"/>
+    
+    <!-- 地面过滤参数 -->
+    <param name="ground_filter_method" value="$(arg ground_filter_method)"/>
+    <param name="ground_height_threshold" value="$(arg ground_height_threshold)"/>
+    <param name="use_cached_ground_info" value="true"/>
+    
+    <!-- 密度过滤参数 -->
+    <param name="density_radius" value="0.5"/>
+    <param name="min_density_neighbors" value="15"/>
+  </node>
+
+  <!-- 3. 启动障碍物检测节点 -->
+  <node name="obstacle_detector" pkg="powerline_extractor" type="obstacle_detector_node" output="screen">
+    <!-- 基本参数 -->
+    <param name="target_frame" value="$(arg target_frame)"/>
+    <param name="powerline_topic" value="/powerline_extractor/clustered_powerline_cloud"/>
+    <param name="downsampled_topic" value="/powerline_extractor/downsamole_cloud"/>
+    <param name="process_rate" value="10.0"/>
+    
+    <!-- 障碍物检测参数 -->
+    <param name="search_radius" value="$(arg search_radius)"/>
+    <param name="min_obstacle_distance" value="$(arg min_obstacle_distance)"/>
+    <param name="cluster_tolerance" value="0.5"/>
+    <param name="min_cluster_size" value="10"/>
+    <param name="max_cluster_size" value="1000"/>
+    <param name="min_obstacle_height" value="0.3"/>
+    <param name="max_obstacle_height" value="10.0"/>
+    
+    <!-- 可视化参数 -->
+    <param name="enable_visualization" value="$(arg enable_visualization)"/>
+    <param name="show_distance_lines" value="true"/>
+    <param name="show_text_labels" value="true"/>
+    <param name="marker_lifetime" value="0.5"/>
+  </node>
+
+  <!-- 4. 启动RViz可视化 -->
+  <node name="rviz" pkg="rviz" type="rviz" 
+        args="-d $(find powerline_extractor)/config/powerline_obstacle_system.rviz" 
+        if="$(arg enable_visualization)"/>
+
+  <!-- 5. 可选：启动距离监控和报警节点 -->
+  <node name="distance_monitor" pkg="powerline_extractor" type="distance_monitor_node" output="screen">
+    <param name="min_safe_distance" value="2.0"/>
+    <param name="warning_distance" value="3.0"/>
+    <param name="critical_distance" value="1.0"/>
+    <remap from="min_distance" to="/obstacle_detector/min_distance"/>
+  </node>
+
+</launch>

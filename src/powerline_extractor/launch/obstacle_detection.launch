@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- 参数设置 -->
+  <arg name="target_frame" default="map"/>
+  
+  <!-- 订阅的话题名 -->
+  <arg name="powerline_topic" default="/powerline_extractor/clustered_powerline_cloud"/>
+  <arg name="downsampled_topic" default="/powerline_extractor/downsamole_cloud"/>
+  
+  <!-- 障碍物检测参数 -->
+  <arg name="search_radius" default="5.0"/>              <!-- 电力线周围搜索半径(米) -->
+  <arg name="min_obstacle_distance" default="2.0"/>       <!-- 最小障碍物距离阈值(米) -->
+  <arg name="cluster_tolerance" default="0.5"/>           <!-- 聚类容差(米) -->
+  <arg name="min_cluster_size" default="10"/>             <!-- 最小聚类大小 -->
+  <arg name="max_cluster_size" default="1000"/>           <!-- 最大聚类大小 -->
+  <arg name="min_obstacle_height" default="0.3"/>        <!-- 最小障碍物高度(米) -->
+  <arg name="max_obstacle_height" default="10.0"/>       <!-- 最大障碍物高度(米) -->
+  
+  <!-- 新增电力线排除参数 -->
+  <arg name="powerline_exclusion_radius" default="1.5"/>  <!-- 电力线排除半径(米) -->
+  <arg name="min_obstacle_separation" default="2.0"/>     <!-- 障碍物与电力线最小分离距离(米) -->
+  <arg name="use_intensity_filter" default="false"/>      <!-- 是否使用强度过滤 -->
+  <arg name="powerline_intensity_threshold" default="100.0"/> <!-- 电力线强度阈值 -->
+
+  <!-- 可视化参数 -->
+  <arg name="enable_visualization" default="true"/>       <!-- 是否启用可视化 -->
+  <arg name="show_distance_lines" default="true"/>       <!-- 是否显示距离线 -->
+  <arg name="show_text_labels" default="true"/>          <!-- 是否显示文本标签 -->
+  <arg name="marker_lifetime" default="5"/>            <!-- 标记生存时间(秒) -->
+  
+  <!-- 处理频率 -->
+  <arg name="process_rate" default="10.0"/>              <!-- 处理频率(Hz) -->
+
+  <!-- 启动障碍物检测节点 -->
+  <node name="obstacle_detector" pkg="powerline_extractor" type="obstacle_detector_node" output="screen">
+    <!-- 基本参数 -->
+    <param name="target_frame" value="$(arg target_frame)"/>
+    <param name="powerline_topic" value="$(arg powerline_topic)"/>
+    <param name="downsampled_topic" value="$(arg downsampled_topic)"/>
+    <param name="process_rate" value="$(arg process_rate)"/>
+    
+    <!-- 障碍物检测参数 -->
+    <param name="search_radius" value="$(arg search_radius)"/>
+    <param name="min_obstacle_distance" value="$(arg min_obstacle_distance)"/>
+    <param name="cluster_tolerance" value="$(arg cluster_tolerance)"/>
+    <param name="min_cluster_size" value="$(arg min_cluster_size)"/>
+    <param name="max_cluster_size" value="$(arg max_cluster_size)"/>
+    <param name="min_obstacle_height" value="$(arg min_obstacle_height)"/>
+    <param name="max_obstacle_height" value="$(arg max_obstacle_height)"/>
+    
+    <!-- 新增电力线排除参数 -->
+    <param name="powerline_exclusion_radius" value="$(arg powerline_exclusion_radius)"/>
+    <param name="min_obstacle_separation" value="$(arg min_obstacle_separation)"/>
+    <param name="use_intensity_filter" value="$(arg use_intensity_filter)"/>
+    <param name="powerline_intensity_threshold" value="$(arg powerline_intensity_threshold)"/>
+
+
+    <!-- 可视化参数 -->
+    <param name="enable_visualization" value="$(arg enable_visualization)"/>
+    <param name="show_distance_lines" value="$(arg show_distance_lines)"/>
+    <param name="show_text_labels" value="$(arg show_text_labels)"/>
+    <param name="marker_lifetime" value="$(arg marker_lifetime)"/>
+  </node>
+  
+  <!-- 启动距离监控节点 -->
+  <node name="distance_monitor" pkg="powerline_extractor" type="distance_monitor_node" output="screen">
+    <!-- 距离监控参数 -->
+    <param name="min_safe_distance" value="2.0"/>          <!-- 最小安全距离(米) -->
+    <param name="warning_distance" value="3.0"/>           <!-- 警告距离(米) -->
+    <param name="critical_distance" value="1.0"/>          <!-- 危险距离(米) -->
+    <param name="enable_sound_alerts" value="true"/>       <!-- 启用声音报警 -->
+    <param name="enable_text_alerts" value="true"/>        <!-- 启用文本报警 -->
+    
+    <!-- 重映射话题 -->
+    <remap from="min_distance" to="/obstacle_detector/min_distance"/>
+  </node>
+
+
+  <!-- 启动RViz进行可视化 -->
+  <node name="rviz_obstacle_detection" pkg="rviz" type="rviz" 
+        args="-d $(find powerline_extractor)/config/obstacle_detection.rviz" 
+        if="$(arg enable_visualization)"/>
+        
+  <!-- 可选：启动rqt_plot显示距离曲线 -->
+  <!-- <node name="distance_plot" pkg="rqt_plot" type="rqt_plot" 
+        args="/obstacle_detector/min_distance/data" /> -->
+</launch>
+
+
+
+<!-- 参数使用说明 -->
+  <!-- 
+  参数调整建议：
+  
+  1. powerline_exclusion_radius (默认1.5m):
+     - 这是最关键的参数，定义了电力线周围的排除区域
+     - 如果电力线仍被标记为障碍物，增加这个值（试试2.0或2.5）
+     - 如果真正的障碍物被错误排除，减少这个值
+  
+  2. min_obstacle_separation (默认2.0m):
+     - 定义障碍物必须与电力线保持的最小距离
+     - 这是最终的过滤阈值，确保检测到的障碍物确实远离电力线
+  
+  3. use_intensity_filter (默认false):
+     - 如果您的激光雷达数据中电力线有特定的强度特征，可以启用此选项
+     - 需要同时调整powerline_intensity_threshold
+  
+  4. search_radius (默认5.0m):
+     - 定义在电力线周围多大范围内搜索障碍物
+     - 应该比powerline_exclusion_radius大很多
+  
+  推荐的参数组合：
+  - 如果电力线较细：powerline_exclusion_radius=1.0, min_obstacle_separation=1.5
+  - 如果电力线较粗或有杆塔：powerline_exclusion_radius=2.0, min_obstacle_separation=2.5
+  - 高精度场景：powerline_exclusion_radius=0.8, min_obstacle_separation=1.2
+  -->

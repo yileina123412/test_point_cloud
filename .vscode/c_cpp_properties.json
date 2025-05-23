@@ -2,6 +2,7 @@
   "configurations": [
     {
       "browse": {
+        
         "databaseFilename": "${default}",
         "limitSymbolsToIncludedHeaders": false
       },

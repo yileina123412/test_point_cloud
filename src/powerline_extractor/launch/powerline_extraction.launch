@@ -4,6 +4,13 @@
   <arg name="use_lidar_data" default="true"/>
   <arg name="mat_file_path" default="$(find powerline_extractor)/datas/L037_Sens1_600x250_cloud_8.mat"/>
   <arg name="target_frame" default="map"/>
+<!-- 
+  <arg name="lidar_frame" default="livox_frame"/>  
+  <arg name="lidar_topic" default="/livox/lidar"/> 
+ -->
+  <arg name="lidar_frame" default="rslidar"/>  <!-- 新增 -->
+  <arg name="lidar_topic" default="/rslidar_points"/>  <!-- 新增，根据你的实际话题名修改 -->
+
   <arg name="publish_rate" default="1.0"/>
 
   <!-- 点云裁减和累积参数 -->
@@ -31,7 +38,8 @@
   <arg name="min_density_neighbors" default="15"/>
 
   <!-- 启动坐标转换 -->
-  <node pkg="tf2_ros" type="static_transform_publisher" name="rslidar_to_map" args="0 0 0 0 0 0 map rslidar" />
+  <node pkg="tf2_ros" type="static_transform_publisher" name="livox_to_map" 
+        args="0 0 0 0 0 0 $(arg target_frame) $(arg lidar_frame)" />  <!-- 修改 -->
 
   
   <!-- 启动电力线提取节点 -->
@@ -39,6 +47,10 @@
     <param name="use_lidar_data" value="$(arg use_lidar_data)"/>
     <param name="data_folder" value="$(arg mat_file_path)"/>
     <param name="target_frame" value="$(arg target_frame)"/>
+
+    <param name="lidar_frame" value="$(arg lidar_frame)"/>  <!-- 新增 -->
+    <param name="lidar_topic" value="$(arg lidar_topic)"/>  <!-- 新增 -->
+
     <param name="publish_rate" value="$(arg publish_rate)"/>
 
     <!-- 点云裁减和累积参数 -->

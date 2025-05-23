@@ -28,7 +28,6 @@ find_package(catkin REQUIRED COMPONENTS
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
-find_package(Open3D REQUIRED)
 
 ## Find system libraries
 find_package(PCL REQUIRED)
@@ -128,7 +127,7 @@ catkin_package(
   INCLUDE_DIRS include
   LIBRARIES cloud_processing
   CATKIN_DEPENDS roscpp std_msgs sensor_msgs pcl_ros pcl_conversions 
-  DEPENDS PCL Open3D EIGEN3 MATIO
+  DEPENDS PCL EIGEN3 MATIO
 )
 
 ###########
@@ -141,7 +140,6 @@ include_directories(
   include
   ${catkin_INCLUDE_DIRS}
   ${PCL_INCLUDE_DIRS}
-  ${Open3D_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS}
   ${MATIO_INCLUDE_DIRS}
 )

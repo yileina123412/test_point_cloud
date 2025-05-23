@@ -28,6 +28,9 @@ PowerlineExtractor::PowerlineExtractor()
     nh_.param<int>("max_cluster_size", max_cluster_size_, 100000);
     nh_.param<bool>("use_lidar_data", use_lidar_data_, false);
     nh_.param<std::string>("target_frame", target_frame_, "map");
+
+    nh_.param<std::string>("lidar_frame", lidar_frame_, "livox_frame");  // 新增
+    nh_.param<std::string>("lidar_topic", lidar_topic_, "/rslidar_points");  // 新增
     // 新增参数
     nh_.param<double>("clip_radius", clip_radius_, 8.0);
     nh_.param<int>("max_accumulated_frames", max_accumulated_frames_, 10);
@@ -58,8 +61,8 @@ PowerlineExtractor::PowerlineExtractor()
     
     // 如果使用LiDAR数据，设置订阅器
     if (use_lidar_data_) {
-        lidar_sub_ = nh_.subscribe("/rslidar_points", 1, &PowerlineExtractor::lidarCallback, this);
-        ROS_INFO("Subscribed to /rslidar_points topic for LiDAR data");
+        lidar_sub_ = nh_.subscribe(lidar_topic_, 1, &PowerlineExtractor::lidarCallback, this);  // 修改
+        ROS_INFO("Subscribed to %s topic for LiDAR data", lidar_topic_.c_str());  // 修改
     } else {
         // 加载.mat文件
         if (!loadMatFile(mat_file_path_)) {
@@ -92,6 +95,9 @@ void PowerlineExtractor::checkParameters() {
     ROS_INFO("Parameter 'max_cluster_size': %d", max_cluster_size_);
     ROS_INFO("Parameter 'use_lidar_data': %d", use_lidar_data_);
     ROS_INFO("Parameter 'target_frame': %s", target_frame_.c_str());
+
+    ROS_INFO("Parameter 'lidar_frame': %s", lidar_frame_.c_str());  // 新增
+    ROS_INFO("Parameter 'lidar_topic': %s", lidar_topic_.c_str());  // 新增
     // 新增参数日志
     ROS_INFO("Parameter 'clip_radius': %f", clip_radius_);
     ROS_INFO("Parameter 'max_accumulated_frames': %d", max_accumulated_frames_);

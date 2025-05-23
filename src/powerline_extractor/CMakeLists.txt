@@ -26,10 +26,12 @@ find_package(catkin REQUIRED COMPONENTS
   tf2_ros
   tf2_eigen
   tf2_sensor_msgs
+  message_filters
+  visualization_msgs
+  sound_play
 )
 
 
-find_package(Open3D REQUIRED)
 
 ## Find system libraries
 find_package(PCL REQUIRED)
@@ -140,8 +142,8 @@ endif()
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES cloud_processing
-  CATKIN_DEPENDS roscpp std_msgs sensor_msgs pcl_ros pcl_conversions tf2_ros tf2_eigen tf2_sensor_msgs
-  DEPENDS PCL Open3D EIGEN3 MATIO OpenMP
+  CATKIN_DEPENDS roscpp std_msgs sensor_msgs pcl_ros pcl_conversions tf2_ros tf2_eigen tf2_sensor_msgs message_filters visualization_msgs sound_play
+  DEPENDS PCL EIGEN3 MATIO OpenMP
 )
 
 ###########
@@ -154,7 +156,6 @@ include_directories(
   include
   ${catkin_INCLUDE_DIRS}
   ${PCL_INCLUDE_DIRS}
-  ${Open3D_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS}
   ${MATIO_INCLUDE_DIRS}
   ${OpenMP_INCLUDE_DIRS}
@@ -171,6 +172,32 @@ add_executable(powerline_extractor_node
   src/powerline_extractor_node.cpp 
   src/powerline_extractor.cpp)
 target_link_libraries(powerline_extractor_node ${catkin_LIBRARIES} ${MATIO_LIBRARIES} ${PCL_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS} ${OpenMP_INCLUDE_DIRS})
+
+
+# 添加新的可执行文件：
+
+# 障碍物检测节点
+add_executable(obstacle_detector_node 
+  src/obstacle_detector_node.cpp 
+  src/obstacle_detector.cpp
+)
+
+target_link_libraries(obstacle_detector_node
+  ${catkin_LIBRARIES}
+  ${PCL_LIBRARIES}
+)
+
+# 距离监控节点
+add_executable(distance_monitor_node 
+  src/distance_monitor.cpp
+)
+
+target_link_libraries(distance_monitor_node
+  ${catkin_LIBRARIES}
+)
+
+
+
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

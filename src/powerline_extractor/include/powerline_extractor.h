@@ -113,10 +113,12 @@ private:
     tf2_ros::Buffer tf_buffer_;
     tf2_ros::TransformListener tf_listener_;
     std::string target_frame_;
+    std::string lidar_frame_;  // 新增：雷达坐标系参数
     
     // 数据源选择
     bool use_lidar_data_;
     bool new_lidar_data_available_;
+    std::string lidar_topic_;  // 新增：雷达话题参数
     
     // 参数
     double scale_factor_;
